@@ -1,4 +1,4 @@
-- name: variables from files
+- name: variables from inventory
   hosts: web
   tasks:
   - name: print course information
