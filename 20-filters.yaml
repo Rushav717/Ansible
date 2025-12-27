@@ -1,6 +1,8 @@
 - name: filters
   hosts: local
   connection: local
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
   - name: handle undefined variables
     ansible.builtin.debug:
@@ -48,9 +50,13 @@
     ansible.builtin.debug:
       msg: "min is: {{ numbers | min }}, max is: {{ numbers | max }}"
 
+  - name: Install netaddr python library
+    ansible.builtin.pip:
+        name: netaddr
+        executable: pip3
+
   - name: check ip address is valid or notify
     vars:
       ip: "192.168.1.1"
-      ansible_python_interpreter: /usr/bin/python3
     ansible.builtin.debug:
       msg: ip is "{{ ip | ansible.utils.ipaddr }}"
