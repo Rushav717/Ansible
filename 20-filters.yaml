@@ -47,3 +47,9 @@
       numbers: [13,24,554,21321]
     ansible.builtin.debug:
       msg: "Min is: {{ numbers | min }}, Max is {{ numbers | max }}"
+
+  - name: check ipaddress is valid or not
+    vars:
+      ip: "172.31.4.148"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
