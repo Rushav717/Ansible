@@ -11,3 +11,12 @@
       fruits: "apple, banana, orange" #string
     ansible.builtin.debug:
       msg: "fruits are {{ fruits | split(',') }}"
+    
+  - name: Convert map to list
+    vars:
+      course: #map
+        name: Devops
+        duration: 120 hrs
+        trainer: siva
+    ansible.builtin.debug:
+      msg: "course info: {{ course | dict2items }}"
