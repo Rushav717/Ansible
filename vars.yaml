@@ -1,5 +1,2 @@
-# COURSE: Devsecops
-# DURATION: 120HRS
-# TRAINER: siva
 
-GREET="FILES"
+GREET: "FILES"
