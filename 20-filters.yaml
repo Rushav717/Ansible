@@ -34,4 +34,4 @@
     vars:
       name: sIVA
     ansible.builtin.debug:
-      msg: "hello {{ hello | lower }}"   
+      msg: "hello {{ name | lower }}"   
