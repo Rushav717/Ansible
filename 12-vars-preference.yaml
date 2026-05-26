@@ -12,6 +12,6 @@
   tasks: #Task level
   - name: print the variables
     vars:
-      GREET: "Task"
+      GREET="Task"
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
