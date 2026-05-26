@@ -15,7 +15,7 @@
       cicd: jenkins
       cloud: aws
       containerization: docker
-    tasks:
-    - name: print coorse information
-      ansible.builtin.debug:
-        msg: "Hello i am learning {{ course_name }}, duration: {{ duration }}, topics are {{ topics }}, is it live: {{ live }}, tools covered are {{ tools }}"
+  tasks:
+  - name: print coorse information
+    ansible.builtin.debug:
+      msg: "Hello i am learning {{ course_name }}, duration: {{ duration }}, topics are {{ topics }}, is it live: {{ live }}, tools covered are {{ tools }}"
