@@ -32,7 +32,7 @@
 
   - name: convert upper to lower
     tags:
-    - upper to lower
+    - uppertolower
     vars:
       name: sIVA
     ansible.builtin.debug:
