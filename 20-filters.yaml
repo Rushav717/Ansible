@@ -31,10 +31,12 @@
       msg: "Course info: {{ course | items2dict }}"
 
   - name: convert upper to lower
+    tags:
+    - upper to lower
     vars:
       name: sIVA
     ansible.builtin.debug:
-      msg: "hello {{ name | lower }}"   
+      msg: "hello {{ name | lower }}"
 
   - name: convert lower to upper
     vars:
