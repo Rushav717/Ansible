@@ -51,6 +51,8 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
     loop: "{{ ec2_info.results }}"
+    loop_control:
+      label: "{{ item.instances[0].private_ip_address }}"
 
   - name: create public ip r53 record
     amazon.aws.route53:
@@ -62,4 +64,6 @@
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
     loop: "{{ ec2_info.results }}"
+    loop_control:
+      label: "{{ item.instances[0].public_ip_address }}"
     when: item.item == "frontend"
